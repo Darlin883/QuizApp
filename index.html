@@ -9,7 +9,18 @@
 <body>
     <section class="wrapper">
         <section class="container">
-            <section class="questions"></section>
+            <section class="questions">
+                <h2>What's you're favorite front-end language?</h2>
+                <form action="/action_page.php" class="form-css">
+                    <p>Please choose best answer that corresponds with the prompt above:</p>
+                    <input type="radio" id="html" name="fav_language" value="HTML" class="scaled-radio">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS" class="scaled-radio">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript" class="scaled-radio">
+                    <label for="javascript">JavaScript</label>
+                  </form>
+            </section>
             <button class="submit">Submit</button>
         </section>
     </section>

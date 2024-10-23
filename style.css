@@ -27,11 +27,29 @@
 }
 
 .questions{
+    display: flex;
+    flex-direction: column;
     width: 550px;
     height: 380px;
     border-radius: 10px;
-    background-color: rgb(106, 106, 106);
+    /* background-color: rgb(106, 106, 106); */
     margin-bottom: 15%;
+}
+
+.questions h2{
+    font-size: 28px;
+    font-family:Arial, Helvetica, sans-serif ;
+    margin-top: 7%;
+}
+.form-css{
+    font-size: 20px;
+    margin: auto;
+    margin-top: 10%;
+    
+}
+
+.scaled-radio {
+    transform: scale(1.15); /* Adjust the scale value as needed for radio's */
 }
 
 .submit{
