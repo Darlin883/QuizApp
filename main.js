@@ -1,10 +1,15 @@
 
 
 function CheckAnswer(){
-    const checkedRadio = document.querySelector('input[name="color"]:checked');
-    const RadioValue = checkedRadio ? checkedRadio.value : null; // to handle the null
-    console.log(RadioValue)
-    let userAnswer = RadioValue;
-    let correctAnser = "blue";
     
+    
+    getUserInput('color');
+    
+}
+
+function getUserInput(questionName){
+    const checkedRadio = document.querySelector(`input[name="${questionName}"]:checked`);
+    const RadioValue = checkedRadio ? checkedRadio.value : null; // to handle the null
+    let userAnswer = RadioValue;
+    console.log(userAnswer);
 }
