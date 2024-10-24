@@ -10,18 +10,26 @@
     <section class="wrapper">
         <section class="container">
             <section class="questions">
-                <h2>What's you're favorite front-end language?</h2>
+                <h2>What's Color is the Sky?</h2>
                 <form action="/action_page.php" class="form-css">
                     <p>Please choose best answer that corresponds with the prompt above:</p>
-                    <input type="radio" id="html" name="fav_language" value="HTML" class="scaled-radio">
-                    <label for="html">HTML</label><br>
-                    <input type="radio" id="css" name="fav_language" value="CSS" class="scaled-radio">
-                    <label for="css">CSS</label><br>
-                    <input type="radio" id="javascript" name="fav_language" value="JavaScript" class="scaled-radio">
-                    <label for="javascript">JavaScript</label>
+                    <input type="radio" id="myRadio" name="color" value="ORANGE" class="scaled-radio">
+                    <label for="orange">orange</label><br>
+
+                    <input type="radio" id="myRadio" name="color" value="BLUE" class="scaled-radio">
+                    <label for="blue">blue</label><br>
+
+                    <input type="radio" id="myRadio" name="color" value="GREEN" class="scaled-radio">
+                    <label for="green">green</label>
+
+                  <!-- an error i found is that if the names for the radio buttons
+                   are not the same, the radio buttons will not work and 
+                   when you try to press on other radio buttons they they'll
+                   all be permanently selected-->
+                  
                   </form>
             </section>
-            <button class="submit">Submit</button>
+            <button class="submit" onclick="CheckAnswer()">Submit</button>
         </section>
     </section>
     <script src="main.js"></script>
