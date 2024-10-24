@@ -15,7 +15,7 @@
     border-radius: 10px;
 }
 
-.container {
+#container {
     display: flex;
     justify-content: space-around;
     align-items: end;
@@ -57,3 +57,27 @@
 .current-question {
     display: block;
 }
+
+.result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.result-screen h2 {
+    font-size: 28px;
+}
+
+.result-screen button {
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+

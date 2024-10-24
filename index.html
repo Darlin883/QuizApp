@@ -8,7 +8,7 @@
 </head>
 <body>
     <section class="wrapper">
-        <section class="container">
+        <section id="container">
             <section class="questions">
                 <div class="question q1 current-question">
                     <h2>What's Mr. C's hair color?</h2>
@@ -167,22 +167,27 @@
                     <h2>What class group does Mr. C teach?</h2>
                     <p>Please choose the best answer that corresponds with the prompt above:</p><br>
                     <form>
-                        <input type="radio" id="am-freshman" name="play" value="AM-FRESHMAN">
+                        <input type="radio" id="am-freshman" name="time" value="AM-FRESHMAN">
                         <label for="am freshman">AM Freshman</label><br>
 
-                        <input type="radio" id="pm-freshman" name="play" value="PM-FRESHMAN">
+                        <input type="radio" id="pm-freshman" name="time" value="PM-FRESHMAN">
                         <label for="pm freshman">PM Freshman</label><br>
 
-                        <input type="radio" id="am-sophmore" name="play" value="AM-SOPHMORE">
+                        <input type="radio" id="am-sophmore" name="time" value="AM-SOPHMORE">
                         <label for="am sophmore">AM Sophmore</label><br>
 
-                        <input type="radio" id="pm-sophmore" name="play" value="PM-SOPHMORE">
+                        <input type="radio" id="pm-sophmore" name="time" value="PM-SOPHMORE">
                         <label for="pm sophmore">PM Sophmore</label>
                     </form>
                 </div>
             </section>
             <button class="submit" onclick="CheckAnswer()">Submit</button>
         </section> 
+        <section id="resultScreen" class="result-screen" style="display: none;">
+            <h2>Quiz Completed!</h2>
+            <p id="scoreText"></p>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </section>
     </section>
     <script src="main.js"></script>
 </body>
