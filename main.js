@@ -28,8 +28,8 @@ function goToNextQuestion(){
     const nextQuestion = document.querySelector('.next-question');
 
     //hide the current question and show the next one
-    nextQuestion.style.display = 'none';
-    nextQuestion.classList.add('current-question');
+    currentQuestion.style.display = 'none';
+    currentQuestion.classList.remove('current-question');
 
     nextQuestion.style.display = 'block';
     nextQuestion.classList.add('current-question');
