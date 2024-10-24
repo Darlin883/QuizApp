@@ -9,26 +9,24 @@
 <body>
     <section class="wrapper">
         <section class="container">
-            <section class="questions">
+            <section class="questions current-question">
                 <h2>What's Color is the Sky?</h2>
-                <form action="/action_page.php" class="form-css">
-                    <p>Please choose best answer that corresponds with the prompt above:</p>
-                    <input type="radio" id="myRadio" name="color" value="ORANGE" class="scaled-radio">
+                <form class="form-css">
+                    <p>Please choose the best answer that corresponds with the prompt above:</p>
+                    <input type="radio" name="color" value="ORANGE" class="scaled-radio">
                     <label for="orange">orange</label><br>
 
-                    <input type="radio" id="myRadio" name="color" value="BLUE" class="scaled-radio">
+                    <input type="radio" name="color" value="BLUE" class="scaled-radio">
                     <label for="blue">blue</label><br>
 
-                    <input type="radio" id="myRadio" name="color" value="GREEN" class="scaled-radio">
+                    <input type="radio" name="color" value="GREEN" class="scaled-radio">
                     <label for="green">green</label>
-
-                  <!-- an error i found is that if the names for the radio buttons
-                   are not the same, the radio buttons will not work and 
-                   when you try to press on other radio buttons they they'll
-                   all be permanently selected-->
-                  
-                  </form>
+                </form>
             </section>
+            
+            <section class="questions next-question" style="display:none;">
+            </section>
+
             <button class="submit" onclick="CheckAnswer()">Submit</button>
         </section>
     </section>
