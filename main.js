@@ -1,36 +1,67 @@
+let correctAnswers = {
+  color: "BLACK",
+  football: "COWBOYS",
+  state: "TEXAS",
+  lounge: "PING-PONG",
+  facial: "YES-FACIAL",
+  glasses: "SOMETIMES-GLASSES",
+  "first-name": "MAINUL",
+  "last-name": "CHOWDHURY",
+  play: "ICE-HOCKEY",
+  time: "AM-FRESHMAN",
+};
 
+let score = 0;
 
-function CheckAnswer(){
-    
-    
-    let userAnswer = getUserInput('color');
-    
+function CheckAnswer() {
+  let currentQuestion = document.querySelector(".current-question");
+  let questionName = currentQuestion.querySelector('input[type="radio"]').name;
+  let userAnswer = getUserInput(questionName);
 
-    if(userAnswer){
-        console.log("question 1 Answer: ", userAnswer);
-        goToNextQuestion();
+  if (userAnswer) {
+    if (userAnswer === correctAnswers[questionName]) {
+      score++;
     }
-    else{
-        alert("Please select an answer!");
-    }
-
-    
+    goToNextQuestion();
+  } else {
+    alert("Please select an answer!");
+  }
 }
 
-function getUserInput(questionName){
-    const checkedRadio = document.querySelector(`input[name="${questionName}"]:checked`);
-    const RadioValue = checkedRadio ? checkedRadio.value : null; // to handle the null
-    let userAnswer = RadioValue;
-    return userAnswer;
+function getUserInput(questionName) {
+  let checkedRadio = document.querySelector(
+    `input[name="${questionName}"]:checked`
+  );
+  return checkedRadio ? checkedRadio.value : null;
 }
-function goToNextQuestion(){
-    const currentQuestion = document.querySelector('.current-question');
-    const nextQuestion = document.querySelector('.next-question');
 
-    //hide the current question and show the next one
-    currentQuestion.style.display = 'none';
-    currentQuestion.classList.remove('current-question');
+function goToNextQuestion() {
+  let currentQuestion = document.querySelector(".current-question");
+  let nextQuestion = currentQuestion.nextElementSibling;
 
-    nextQuestion.style.display = 'block';
-    nextQuestion.classList.add('current-question');
+  if (nextQuestion && nextQuestion.classList.contains("question")) {
+    currentQuestion.style.display = "none";
+    currentQuestion.classList.remove("current-question");
+
+    nextQuestion.style.display = "block";
+    nextQuestion.classList.add("current-question");
+  } else {
+    showFinalScreen();
+  }
+}
+
+function showFinalScreen() {
+  let container = document.getElementById("container");
+  container.innerHTML = `
+        <h2>Your Score: ${score} / 10</h2>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+    `;
+  container.style.display = "flex";
+  container.style.flexDirection = "column";
+  container.style.justifyContent = "center";
+  container.style.alignItems = "center";
+}
+
+function restartQuiz() {
+  window.location.reload(); // Refreshs the page
 }
