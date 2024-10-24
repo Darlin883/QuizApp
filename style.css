@@ -45,7 +45,6 @@
     font-size: 20px;
     margin: auto;
     margin-top: 10%;
-    
 }
 
 .scaled-radio {
@@ -58,4 +57,16 @@
     margin-bottom: 1.3%;
     position: absolute;
     border-radius: 10px;
+}
+
+.q1 {
+    display: none;
+}
+
+.q2 {
+    display: none;
+}
+
+.q3 {
+    display: inline;
 }

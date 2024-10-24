@@ -9,25 +9,67 @@
 <body>
     <section class="wrapper">
         <section class="container">
-            <section class="questions current-question">
-                <h2>What's Color is the Sky?</h2>
+            <section class="questions">
+                <div class="q1"><h2>What's Mr. C's hair color?</h2></div>
+                <div class="q2"><h2>What's Mr. C's favorite football team?</h2></div>
+                <div class="q3"><h2>What state did Mr. C used to live in?</h2></div>
                 <form class="form-css">
-                    <p>Please choose the best answer that corresponds with the prompt above:</p><br>
-                    <input type="radio" name="color" value="ORANGE" class="scaled-radio">
-                    <label for="orange">orange</label><br>
+                    <p>Please choose best answer that corresponds with the prompt above:</p><br>
+                    <!-- Q1 -->
+                     <div class="q1">
+                        <input type="radio" id="myRadio" name="color" value="BROWN" class="scaled-radio">
+                        <label for="Brown">Brown</label><br>
 
-                    <input type="radio" name="color" value="BLUE" class="scaled-radio">
-                    <label for="blue">blue</label><br>
+                        <input type="radio" id="myRadio" name="color" value="BLACK" class="scaled-radio">
+                        <label for="Black">black</label><br>
 
-                    <input type="radio" name="color" value="GREEN" class="scaled-radio">
-                    <label for="green">green</label>
-                </form>
+                        <input type="radio" id="myRadio" name="color" value="BLONDE" class="scaled-radio">
+                        <label for="Blonde">Blonde</label><br>
+
+                        <input type="radio" id="myRadio" name="color" value="ORANGE" class="scaled-radio">
+                        <label for="Orange">Orange</label>
+                     </div>
+                    
+
+                    <!-- Q2 -->
+                    <div class="q2">
+                        <input type="radio" id="myRadio" name="football" value="COWBOYS" class="scaled-radio">
+                        <label for="Cowboys">Cowboys</label><br>
+
+                        <input type="radio" id="myRadio" name="football" value="TEXANS" class="scaled-radio">
+                        <label for="Texans">Texans</label><br>
+
+                        <input type="radio" id="myRadio" name="football" value="EAGLES" class="scaled-radio">
+                        <label for="Eagles">Eagles</label><br>
+
+                        <input type="radio" id="myRadio" name="football" value="GIANTS" class="scaled-radio">
+                        <label for="Giants">Giants</label>
+                    </div>
+                    
+
+                    <!-- Q3 -->
+                    <div class="q3">
+                        <input type="radio" id="myRadio" name="state" value="PENNSYLVANIA" class="scaled-radio">
+                        <label for="Pennsylvania">Pennsylvania</label><br>
+
+                        <input type="radio" id="myRadio" name="state" value="CALIFORNIA" class="scaled-radio">
+                        <label for="California">California</label><br>
+
+                        <input type="radio" id="myRadio" name="state" value="NEVADA" class="scaled-radio">
+                        <label for="Nevada"></label>Nevada<br>
+
+                        <input type="radio" id="myRadio" name="state" value="TEXAS" class="scaled-radio">
+                        <label for="Texas">Texas</label>
+                    </div>
+                  <!-- an error i found is that if the names for the radio buttons
+                   are not the same, the radio buttons will not work and 
+                   when you try to press on other radio buttons they they'll
+                   all be permanently selected-->
+                  
+                  </form>
             </section>
-            
+      
             <section class="questions next-question" style="display:none;">
-                
-            </section>
-
             <button class="submit" onclick="CheckAnswer()">Submit</button>
         </section>
     </section>
